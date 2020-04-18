@@ -11,6 +11,7 @@ const Share = ({ url, title, twitterHandle }) => {
       css={css`
         display: flex;
         align-items: center;
+      border-top:1px grey solid;
         justify-content: flex-start;
         div {
           margin-right: 20px;
@@ -32,15 +33,16 @@ const Share = ({ url, title, twitterHandle }) => {
         css={css`
           flex-grow: 1;
           border-top: 1px solid ${theme.colors.gray};
+          font-size:1rem;
         `}
       />
-      <span>Share article</span>
+      <span style={{fontSize:'.8rem'}}><p>Share article</p></span>
       <TwitterShareButton
         url={url}
         quote={title}
         via={twitterHandle.split('@').join('')}
       >
-        Twitter
+      <p>  Twitter</p>
       </TwitterShareButton>
       <FacebookShareButton
         url={url}
@@ -50,7 +52,7 @@ const Share = ({ url, title, twitterHandle }) => {
           cursor: pointer;
         `}
       >
-        Facebook
+      <p>  Facebook</p>
       </FacebookShareButton>
     </div>
   )

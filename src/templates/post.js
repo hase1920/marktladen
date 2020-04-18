@@ -30,7 +30,29 @@ export default function Post({
       <SEO frontmatter={mdx.frontmatter} isBlogPost />
 
 
-        <Container noVerticalPadding>
+        <Container
+          css= {css`
+            @media(max-width:800px){
+              padding:0;
+              margin:0;
+            }
+            `}
+        >
+
+        {banner && (
+
+            <Img css={css`
+              objectFit:cover;
+              max-height: 420px;
+            `
+
+            }
+              sizes={banner.childImageSharp.fluid}
+              alt={site.siteMetadata.keywords.join(', ')}
+            />
+
+        )}
+        <br />
           <h1
             css={css`
               text-align: center;
@@ -44,22 +66,19 @@ export default function Post({
             {title.toUpperCase()}
           </h1>
 
-          {banner && (
 
-              <Img css={css`
-                objectFit:cover;
-                max-height: 420px;
-              `
-
+          <div css={css`
+            @media(max-width:800px) {
+              ul,ol,p,a,h1,h2,h3 {
+                padding:20px;
               }
-                sizes={banner.childImageSharp.fluid}
-                alt={site.siteMetadata.keywords.join(', ')}
-              />
+            }
 
-          )}
-          <br />
+
+            `}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
-            <p> Artikel von {author}, {date?date:''}</p>
+          </div>
+
         </Container>
         {/* <SubscribeForm /> */}
 

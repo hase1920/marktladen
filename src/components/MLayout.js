@@ -2,7 +2,7 @@ import React from 'react'
 import Container from '../components/Container'
 import {graphql, useStaticQuery} from 'gatsby'
 import Layout from '../components/Layout'
-import Hero from '../components/Hero'
+import Hero from './Hero'
 const MLayout = ({children}) => {
     const data = useStaticQuery(graphql`
     query {
@@ -16,10 +16,8 @@ const MLayout = ({children}) => {
     `)
     return(
         <Layout site={data.site} >
-          <Hero
-          publish="false"
-          titel="#1"
-          text="... "
+          <Hero text=" Hallo "
+          titel="Markt1"
           />
             <Container>
         {children}

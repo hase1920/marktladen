@@ -23,7 +23,7 @@ const Kontakt = () => {
           titel="Bacharach..."
           text="beim Sterben zusehen?"
         />
-     
+
         <Container>
           <h1 style={{fontSize:theme.fontsizes.great}}>
         Markt 1
@@ -33,10 +33,8 @@ const Kontakt = () => {
      <p>Ansprechpartnerin Katrin Gloggengiesser</p>
         </Container>
         </Layout>
-     
+
     )
 }
 
 export default Kontakt
-
-

@@ -12,7 +12,6 @@ import reset from '../lib/reset'
 import { fonts } from '../lib/typography'
 import config from '../../config/website'
 import Footer from '../components/Footer'
-
 import Container from './Container'
 
 const getGlobalStyles = theme => {
@@ -160,7 +159,7 @@ export default ({
   const [hinweis, setHinweis] = useState(true)
 
  const Meldung = ()=>(
-      <Container>
+      <Container >
         <h1>Hinweis zur Datenerhebung</h1>
         <p>Diese Seite ist im Testmodus</p>
         <p>Persönliche Daten erheben wir deshalb nicht, es werden für den Serverbetreiber nur die
@@ -219,7 +218,7 @@ export default ({
       <Fragment>
         <Global styles={reset()} />
         <Global styles={getGlobalStyles(theme)} />
-        <div
+        <Container noHorizontalPadding
           css={css`
             display: flex;
             flex-direction: column;
@@ -270,7 +269,7 @@ export default ({
               noSubscribeForm={noSubscribeForm}
             />
           )}
-        </div>
+        </Container>
       </Fragment>
 
 

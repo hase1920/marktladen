@@ -9,19 +9,21 @@ export default () => {
   return (
     <React.Fragment>
       <Link to="/" activeClassName="active" aria-label="Zur Homeseite">
-       <FaHome /> 
+       <FaHome />
       </Link>
-     
-      <Link to="/veranstaltungen" activeClassName="active" aria-label="Veranstaltungen">
-        Veranstaltungen
+
+      <Link to="/ausstellung" activeClassName="active" aria-label="Ausstellungen">
+        Ausstellung
       </Link>
-      <Link to="/ausstellungen" activeClassName="active" aria-label="Ausstellungen">
-        Ausstellungen
+
+      <Link to="/ueber_uns" activeClassName="active" aria-label="Über uns">
+        Über uns
       </Link>
-      
-      
-      <Link to="/warumweshalb" activeClassName="active" aria-label="Unsere Motivation">
-        Was will Markt 1?
+      <Link to="/termine" activeClassName="active" aria-label="Termine">
+        Termine
+      </Link>
+      <Link to="/archiv" activeClassName="active" aria-label="Archiv">
+      Archiv
       </Link>
       <ThemeToggler
         css={{}}

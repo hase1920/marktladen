@@ -1,7 +1,7 @@
 /** @jsx */
 import React from 'react'
 import { graphql} from 'gatsby'
-import { css, keyframes } from '@emotion/core'
+import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 import Layout from 'components/Layout'
 import Link from 'components/Link'
@@ -35,11 +35,12 @@ export default function Index({ data: { site, allMdx } }) {
         titel="Bacharach..."
        text="beim Sterben zusehen?"
       />
-      <Container
+      <Container noHorizontalPadding noVerticalPadding
         css={css`
 
           display:flex;
           flex-wrap: wrap;
+
           @media(max-width:796px){
             flex-direction: column;
           }
@@ -59,6 +60,7 @@ export default function Index({ data: { site, allMdx } }) {
               margin:1% 1% 90px 1%;
               @media(max-width:796px){
                 min-width:98%;
+                    margin:1% 1% 40px 1%;
               }
             `}
           >
@@ -86,7 +88,7 @@ export default function Index({ data: { site, allMdx } }) {
             </h2>
             <Img css={css`
                objectFit:cover;
-              max-height: 250px;
+              max-height: 240px;
               `}
               fluid={post.frontmatter.banner.childImageSharp.fluid}
                 alt={site.siteMetadata.keywords.join(', ')}
