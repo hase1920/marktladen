@@ -1,0 +1,32 @@
+/* This code is subject to LICENSE in root of this repository */
+
+/* Used to detect in JavaScript if apps have loaded styles or not. */
+:root {
+    --reach-dialog: 1;
+  }
+  
+  [data-reach-dialog-overlay] {
+    background: hsla(0, 0%, 0%, 0.83);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-top:20;
+    overflow: auto;
+  }
+  
+  [data-reach-dialog-content] {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    width: 96%;
+    padding: 0% 2%;
+    margin: 10px auto 0 auto;
+    max-width:1200px;
+    background: white;
+    
+    outline: none;
+  }
+  
