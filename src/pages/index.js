@@ -34,8 +34,7 @@ export default function Index({ data: { site, allMdx } }) {
 
       <Container noHorizontalPadding noVerticalPadding
         css={css`
-         padding: 0;
-          margin:0 auto 0 auto;
+padding: 0; margin:0 auto 0 auto;
           display:flex;
           flex-wrap: wrap;
           @media(max-width:796px){
@@ -82,7 +81,7 @@ export default function Index({ data: { site, allMdx } }) {
                 textAlign:'center',
                 fontSize: theme.fontsizes.h2small,
                 padding:0,
-                margin:'8 auto',
+                margin:'8px auto',
                 letterSpacing:'.05rem',
                 transition: 'all 150ms ease',
                 ':hover': {
@@ -116,11 +115,7 @@ export default function Index({ data: { site, allMdx } }) {
 
 
         ))}
-      <Container css={css`
-        width:90%;
-      `}>
-
-      </Container>
+    
       </Container>
     </Layout>
   )

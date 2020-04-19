@@ -7,8 +7,8 @@ const themes = {
   default: {
     themeName: 'default',
     fontsizes: {
-      h2middle: fontsizes.h2small,
       h2great: fontsizes.h2great,
+      h2small: fontsizes.h2small,
       h3small: fontsizes.h3small,
       h3great: fontsizes.h3great,
       h4small: fontsizes.h4small,
@@ -38,7 +38,7 @@ const themes = {
       ...colors,
     },
     fontsizes: {
-      h2middle: fontsizes.h2small,
+      h2small: fontsizes.h2small,
       h2great: fontsizes.h2great,
       h3small: fontsizes.h3small,
       h3great: fontsizes.h3great,

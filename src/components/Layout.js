@@ -35,9 +35,7 @@ const getGlobalStyles = theme => {
         color: #red;
       }
     }
-    h2 {
 
-    }
     h1,
     h2,
     h3,
@@ -266,7 +264,7 @@ export default ({
           {!noFooter && (
             <Footer
               author={site.siteMetadata.author.name}
-              noSubscribeForm={noSubscribeForm}
+          
             />
           )}
         </Container>
