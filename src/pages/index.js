@@ -2,7 +2,7 @@
 import React from 'react'
 import { graphql} from 'gatsby'
 import { css } from '@emotion/core'
-import styled from '@emotion/styled'
+
 import Layout from 'components/Layout'
 import Link from 'components/Link'
 import { useTheme } from 'components/Theming'
@@ -78,10 +78,10 @@ padding: 0; margin:0 auto 0 auto;
             <h2
               css={css({
                 fontWeight:400,
-
+                textAlign:'center',
                 fontSize: theme.fontsizes.h2small,
                 padding:0,
-                margin:8,
+                margin:'8 auto',
                 letterSpacing:'.05rem',
                 transition: 'all 150ms ease',
                 ':hover': {
@@ -102,8 +102,7 @@ padding: 0; margin:0 auto 0 auto;
                  aria-label={`View ${post.frontmatter.title}`}
               >
             <Img css={css`
-              object-fit:contain;
-                object-position: center;
+              object-fit:cover;
 
               max-height: 220px;
               `}

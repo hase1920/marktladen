@@ -17,8 +17,6 @@ export default function Post({
   data: { site, mdx },
   pageContext: { next, prev },
 }) {
-  const author = mdx.frontmatter.author || config.author
-  const date = mdx.frontmatter.date
   const title = mdx.frontmatter.title
   const banner = mdx.frontmatter.banner
   //const thick=fonts.bold;

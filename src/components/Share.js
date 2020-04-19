@@ -32,7 +32,6 @@ const Share = ({ url, title, twitterHandle }) => {
       <div
         css={css`
           flex-grow: 1;
-          border-top: 1px solid ${theme.colors.gray};
           font-size:1rem;
         `}
       />

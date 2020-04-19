@@ -27,9 +27,10 @@ const getGlobalStyles = theme => {
     a {
       color: ${theme.colors.link};
       text-decoration: none;
+      font-weight: 500;
       &:hover,
       &:focus {
-        color: ${theme.colors.white};
+        color: ${theme.colors.green};
       }
       &:hover {
         color: #red;
@@ -51,18 +52,7 @@ li {
      color:black;
 
   }
-    h2 {
-      text-align: left;
-      font-size: 1.3rem;
-      margin-top: 20px;
-      margin-bottom: 0px;
-      font-weight: 500;
-      line-height: 2;
-      color:black;
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: 500;
-    }
+    
     p{
       text-align: left;
       line-height: 1.5;

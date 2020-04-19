@@ -3,8 +3,7 @@ import {useTheme} from '../components/Theming'
 import Container from '../components/Container'
 import {graphql, useStaticQuery} from 'gatsby'
 import Layout from '../components/Layout'
-import Hero from '../components/Hero'
-
+import Link from '../components/Link'
 const Impressum = () => {
     const theme = useTheme()
     const data = useStaticQuery(graphql`
@@ -19,20 +18,21 @@ const Impressum = () => {
     `)
     return(
         <Layout site={data.site}>
-        <Hero
-          titel="Bacharach..."
-          text="beim Sterben zusehen?"
-          background="ff33ff"
-          publish="true"
-        />
+
 
         <Container>
-          <h1 style={{fontSize:theme.fontsizes.great}}>
-        Markt 1
+          <h1 style={{fontSize:theme.fontsizes.middle}}>
+        Kulturraum Markt 1
      </h1>
-     <p>verantwortlich:<br/>Verschönerungsverein</p>
-     <p>55422 Bacharach, Marktstr. 3</p>
-     <p>Ansprechpartnerin Katrin Gloggengiesser</p>
+     <p>verantwortlich: Verschönerungsverein Bacharach 1873 e.V.</p>
+     <p>55422 Bacharach<br/>
+     Marktstraße 3</p>
+<p>Datenschutzbeauftragte: Katrin Gloggengießer<br/>
+Email: kontakt@markt1-bacharach.de<br/>
+
+<Link to= "/datenschutz"> Zu unseren Datenschutzbestimmungen...</Link>
+     </p>
+
         </Container>
         </Layout>
 

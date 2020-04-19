@@ -12,30 +12,30 @@ export default () => {
        <FaHome />
       </Link>
 
-      <Link to="/ausstellung" activeClassName="active" aria-label="Ausstellungen">
+      <Link style={{fontWeight:100, fontFamily:"Roboto Slab"}} to="/ausstellung" activeClassName="active" aria-label="Ausstellungen">
         Ausstellung
       </Link>
 
-      <Link to="/ueber_uns" activeClassName="active" aria-label="Über uns">
+      <Link style={{fontWeight:100, fontFamily:"Roboto Slab"}} to="/ueber_uns" activeClassName="active" aria-label="Über uns">
         Über uns
       </Link>
-      <Link to="/termine" activeClassName="active" aria-label="Termine">
+      <Link style={{fontWeight:100, fontFamily:"Roboto Slab"}} to="/termine" activeClassName="active" aria-label="Termine">
         Termine
       </Link>
-      <Link to="/archiv" activeClassName="active" aria-label="Archiv">
+      <Link style={{fontWeight:100, fontFamily:"Roboto Slab"}} to="/archiv" activeClassName="active" aria-label="Archiv">
       Archiv
       </Link>
-      <Link to="/foerderer" activeClassName="active" aria-label="Förderer">
+      <Link style={{fontWeight:100, fontFamily:"Roboto Slab"}} to="/foerderer" activeClassName="active" aria-label="Förderer">
     Förderer
       </Link>
 
-      <Link to="/datenschutz" activeClassName="active" aria-label="Datenschutzerklärung">
+      <Link style={{fontSize:"0.8rem",fontWeight:300, letterSpacing: "0.05rem"}} to="/datenschutz" activeClassName="active" aria-label="Datenschutzerklärung">
           Datenschutz
       </Link>
-      <Link to="/kontakt" activeClassName="active" aria-label="Kontakt">
+      <Link style={{fontSize:"0.8rem",fontWeight:300, letterSpacing: "0.05rem"}} to="/kontakt" activeClassName="active" aria-label="Kontakt">
         Kontakt
       </Link>
-      <Link to="/impressun" activeClassName="active" aria-label="Impressum">
+      <Link style={{fontSize:"0.8rem", fontWeight:300, letterSpacing: "0.05rem", marginBottom:50}} to="/impressum" activeClassName="active" aria-label="Impressum">
         Impressum
       </Link>
       <ThemeToggler
