@@ -44,17 +44,17 @@ padding: 0; margin:0 auto 0 auto;
       >
 
       <Hero
-        titel="Finnisage 13.6.2020"
+        titel="Finissage 13.6.2020"
         text="Bacchanale. Retrospektive."
         termin="2.5.–13.6.2020"
         background="#00ff33"
         publish="true"
       />
       <Hero
-        titel="Finnisage 13.6.2020"
-        text="Bacchanale. Retrospektive."
-        termin="2.5.–13.6.2020"
-        background="#ffff33"
+        titel="Vernissage 20.6.2020"
+        text="Urban Scetchers Rhein-Main"
+        termin="20.6.–18.7.2020"
+        background="#df01d7"
         publish="true"
       />
         {allMdx.edges.map(({ node: post }) => (
@@ -67,10 +67,10 @@ padding: 0; margin:0 auto 0 auto;
               margin-bottom: 40px;
               max-width:48%;
               min-width:48%;
-              margin:1% auto 90px auto;
+              margin:1% auto 30px auto;
               @media(max-width:796px){
                 min-width:98%;
-                    margin:1% 1% 40px 1%;
+                    margin:1% 1% 0px 1%;
               }
             `}
           >
@@ -104,7 +104,7 @@ padding: 0; margin:0 auto 0 auto;
             <Img css={css`
               object-fit:cover;
 
-              max-height: 240px;
+              max-height: 220px;
               `}
               fluid={post.frontmatter.banner.childImageSharp.fluid}
                 alt={site.siteMetadata.keywords.join(', ')}

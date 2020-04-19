@@ -1,6 +1,6 @@
 const fontsizes= {
-    h2small: '21px',
-    h2great: '27px',
+    h2small: '24px',
+    h2great: '30px',
 
     h3small: '15px',
     h3great: '24px',

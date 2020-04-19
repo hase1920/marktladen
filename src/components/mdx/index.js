@@ -10,10 +10,12 @@ import Image from './Image'
 import Section from './Section'
 import Article from './Article'
 import Bildtitel from './Titel'
+import Blockquote from './Blockquote'
 
 import Figure from './Figure'
 
 export default {
+  blockquote: props => <Blockquote {...props} />,
   h1: props => <Title {...props} />,
   h2: props => <Subtitle {...props} />,
   h4: props => <Bildtitel  {...props} />,

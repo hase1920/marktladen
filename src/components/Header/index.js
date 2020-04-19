@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import { css } from '@emotion/core'
 import { useTheme } from '../Theming'
-
+import {FaRegEnvelope} from 'react-icons/fa'
 import MobileMenu from './MobileMenu'
 import Links from './Links'
 import Logo from './logo.png'
@@ -17,7 +17,7 @@ const Header = ({ site,siteTitle }) => {
          display:flex;
          justify-content:flex-end;
          padding-top:0px;
-       `}><span style={{color:'#000',letterSpacing: '.02rem',fontSize: '.8rem',fontFamily:'Roboto',fontWeight:300}}> kontakt@markt1-bacharach.de</span></div>
+       `}><span style={{padding:0,margin:'0 -4px 0 0'}}> <a href="mailto:kontakt@markt1-bacharach.de?subject=Anfrage"><FaRegEnvelope fontSize="1.8rem" color="#000"/></a> </span></div>
         <nav
           css={css`
             width: 100%;

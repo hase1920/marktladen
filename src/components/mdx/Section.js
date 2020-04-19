@@ -4,5 +4,4 @@ export default styled.section`
   display:flex;
   flex-wrap: wrap;
   width:100%;
- 
-`
+  `
