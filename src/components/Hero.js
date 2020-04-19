@@ -16,12 +16,11 @@ const Hero = ({titel,text,publish,background,termin}) => {
   if(publish)
   return (
 
-    <section
+    <div
       css={css`
         color: ${theme.colors.white};
         width: 48%;
         background: ${background};
-        background-size: cover;
         padding: 20px 0 30px 0;
         display: flex;
         margin: 1px auto 10px auto;
@@ -84,13 +83,8 @@ const Hero = ({titel,text,publish,background,termin}) => {
 
 
       </Container>
-      <div
-        css={css`
-          height: 150px;
-          overflow: hidden;
-        `}
-      />
-    </section>
+
+    </div>
 
   )
   else {

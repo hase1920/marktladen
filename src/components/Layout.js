@@ -227,17 +227,12 @@ export default ({
             border-left:40px #00ff33 solid;
             border-right:40px #00ff33 solid;
             @media(max-width:800px){
+             width:100%;
+              margin:auto;
+              border-left:30px #00ff33 solid;
+            border-right:30px #00ff33 solid;
+            }
 
-              margin:auto;
-              border-left:30px #00ff33 solid;
-            border-right:30px #00ff33 solid;
-            }
-            @media(max-width:320px){
-             width:100%
-              margin:auto;
-              border-left:30px #00ff33 solid;
-            border-right:30px #00ff33 solid;
-            }
           `}
         >
           <Helmet
@@ -264,7 +259,7 @@ export default ({
           {!noFooter && (
             <Footer
               author={site.siteMetadata.author.name}
-          
+
             />
           )}
         </Container>
