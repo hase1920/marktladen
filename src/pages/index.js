@@ -34,7 +34,8 @@ export default function Index({ data: { site, allMdx } }) {
 
       <Container noHorizontalPadding noVerticalPadding
         css={css`
-padding: 0; margin:0 auto 0 auto;
+         padding: 0;
+          margin:0 auto 0 auto;
           display:flex;
           flex-wrap: wrap;
           @media(max-width:796px){
