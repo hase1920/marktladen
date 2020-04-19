@@ -12,7 +12,7 @@ import Article from './Article'
 import Bildtitel from './Titel'
 import Blockquote from './Blockquote'
 
-import Figure from './Figure'
+
 
 export default {
   blockquote: props => <Blockquote {...props} />,
@@ -24,7 +24,6 @@ export default {
   ul : props => <Ul {...props} />,
   ol : props => <Ol {...props} />,
   img: props => <Image {...props} />,
-  figure: props => <Figure {...props} />,
   section : props => <Section {...props} />,
   article: props => <Article {...props} />,
   code: Code,

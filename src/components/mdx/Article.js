@@ -4,9 +4,11 @@ export default styled.article`
   display:flex;
   flex-direction: column;
   justifyContent: flex-start;
-  h2 {color: black;font-size:.9rem;}
+  h2 {
+    color: black;font-size:.9rem;
+  }
   width:48%;
-padding: 15px;
+  padding: 15px;
 :nth-child(even) {background: #df01d7}
 :nth-child(odd) {background: #00ff33}
   img {

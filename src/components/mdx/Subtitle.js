@@ -21,14 +21,11 @@ font-weight: 500;
   line-height: 1.2;
 }
 
-@media(min-width1200px){
+@media(min-width:1200px){
   margin-top: 2rem;
   margin-bottom: 2rem;
   font-size:1.2rem;
   line-height: 1.2rem;
-
-
-
 }
 
 `
