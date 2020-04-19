@@ -16,12 +16,12 @@ const Header = ({ site,siteTitle }) => {
         <div css={css`
          display:flex;
          justify-content:flex-end;
-         padding-top:20px;
+         padding-top:0px;
        `}><span style={{color:'#000',letterSpacing: '.02rem',fontSize: '.8rem',fontFamily:'Roboto',fontWeight:300}}> kontakt@markt1-bacharach.de</span></div>
         <nav
           css={css`
             width: 100%;
-            padding:40px 0 20px 0;
+            padding:0px 0 20px 0;
             display: flex;
             justify-content:space-between;
           `}
@@ -35,7 +35,7 @@ const Header = ({ site,siteTitle }) => {
               margin-left: 0;
               padding-left:0;
               flex-basis:1;
-              margin-top:-20px;
+              margin-top:-30px;
               font-size: ${theme.fontsizes.xmiddle};
              letter-spacing:.09rem;
               img {

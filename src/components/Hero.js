@@ -7,45 +7,54 @@ import Container from 'components/Container'
 import { rhythm } from '../lib/typography'
 import { bpMaxSM, bpMaxMD } from '../lib/breakpoints'
 
-import HBild from './bsp.jpg'
 
 
 
 
-const Hero = ({titel,text,publish}) => {
+const Hero = ({titel,text,publish,background,termin}) => {
   const theme = useTheme()
   if(publish)
   return (
-    
+
     <section
       css={css`
         color: ${theme.colors.white};
-        width: 100%;
-        background: url(${HBild}) no-repeat;
+        width: 48%;
+        background: ${background};
         background-size: cover;
         padding: 20px 0 30px 0;
         display: flex;
+        margin: 1px auto 10px auto;
+        max-height: 380px;
+        @media(max-width:800px) {
+          width:98%;
+          margin: 1px auto;
+        }
       `}
     >
       <Container
         css={css`
           display: flex;
           flex-direction: column;
+          padding:10px;
           ${bpMaxSM} {
             width:100%;
           }
-          
+
         `}
       >
-       
+
+
+
         <h1
           css={css`
-            color: ${theme.colors.white};
+            color: ${theme.colors.black};
             position: relative;
             z-index: 5;
             line-height: 1.5;
             margin: 0;
             max-width: ${rhythm(20)};
+            font-weight: 500;
             font-size: ${theme.fontsizes.xgreat};
             ${bpMaxMD}{
                 font-size: ${theme.fontsizes.great};
@@ -54,7 +63,26 @@ const Hero = ({titel,text,publish}) => {
         >
           {titel}
         </h1>
-        {text? text:""}
+  <span
+   css={css`
+    color:#000;
+
+     `}
+
+  >{text? text:""} </span>    <br/>
+
+
+
+       <span css={css`
+           color: ${theme.colors.white};
+           font-size: 3rem;
+           ${bpMaxMD}{
+               font-size:2rem;
+           }
+         `}>   {termin? termin:""}
+      </span>
+
+
       </Container>
       <div
         css={css`
@@ -63,7 +91,7 @@ const Hero = ({titel,text,publish}) => {
         `}
       />
     </section>
-    
+
   )
   else {
     return ""

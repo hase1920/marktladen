@@ -56,10 +56,13 @@ export default function Post({
           <h1
             css={css`
               text-align: center;
+              margin-top: 10px;
               margin-bottom: 20px;
-              font-size:${theme.fontsizes.xmiddle};
+              font-weight:500;
+              letter-spacing:0.05rem;
+              font-size:${theme.fontsizes.xgreat};
               @media(max-width:550px){
-                font-size:${theme.fontsizes.middle};
+                font-size:${theme.fontsizes.xgreat};
               }
             `}
           >

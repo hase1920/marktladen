@@ -25,6 +25,16 @@ export default () => {
       <Link to="/archiv" activeClassName="active" aria-label="Archiv">
       Archiv
       </Link>
+
+      <Link to="/datenschutz" activeClassName="active" aria-label="Datenschutzerklärung">
+          Datenschutz
+      </Link>
+      <Link to="/kontakt" activeClassName="active" aria-label="Kontakt">
+        Kontakt
+      </Link>
+      <Link to="/impressun" activeClassName="active" aria-label="Impressum">
+        Impressum
+      </Link>
       <ThemeToggler
         css={{}}
         toggleTheme={theme.toggleTheme}

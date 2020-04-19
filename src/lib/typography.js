@@ -4,9 +4,9 @@ import '../fonts/fonts.css'
 export const fonts = {
   regular: 'Roboto',
   regularItalic: 'Roboto Slab',
-  semibold: 'Roboto Slab',
+  semibold: 'Roboto',
   semiboldItalic: 'Roboto Slab',
-  bold: 'Roboto',
+  bold: 'Roboto Slab',
   boldItalic: 'Inter UI Bold Italic',
 }
 
@@ -14,7 +14,7 @@ const typography = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.55,
   headerLineHeight: 1.4,
-  headerFontFamily: [fonts.bold, 'sans-serif'],
+  headerFontFamily: [fonts.bold, 'serif'],
   bodyFontFamily: [fonts.regular, 'sans-serif'],
   headerColor: 'hsla(0,0%,0%,0.9)',
   bodyColor: 'hsla(0,0%,0%,0.8)',

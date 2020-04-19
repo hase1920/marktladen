@@ -9,7 +9,7 @@ autor: 'katrin gloggengiesser'
 ---
 
 
-![Willy Praml](./images/theater/2.jpg)
+
 
 
 
@@ -23,4 +23,4 @@ Die Veranstaltung beginnt um **20.00 Uhr**.
 **Ort**: Naxos-Halle  
 
 
-[-> Bildergalerie zum Theaterfestival](/aktuell)
+[Bildergalerie zum Theaterfestival](/aktuell)

@@ -22,6 +22,8 @@ const Impressum = () => {
         <Hero
           titel="Bacharach..."
           text="beim Sterben zusehen?"
+          background="ff33ff"
+          publish="true"
         />
 
         <Container>

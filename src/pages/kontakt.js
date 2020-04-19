@@ -22,6 +22,8 @@ const Kontakt = () => {
         <Hero
           titel="Bacharach..."
           text="beim Sterben zusehen?"
+          background="#00ff33"
+          publish="true"
         />
 
         <Container>

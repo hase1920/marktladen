@@ -31,22 +31,32 @@ export default function Index({ data: { site, allMdx } }) {
   return (
     <Layout site={site}>
 
-      <Hero
-        titel="Bacharach..."
-       text="beim Sterben zusehen?"
-      />
+
       <Container noHorizontalPadding noVerticalPadding
         css={css`
-
+padding: 0; margin:0 auto 0 auto;
           display:flex;
           flex-wrap: wrap;
-
           @media(max-width:796px){
             flex-direction: column;
           }
         `}
       >
 
+      <Hero
+        titel="Finnisage 13.6.2020"
+        text="Bacchanale. Retrospektive."
+        termin="2.5.–13.6.2020"
+        background="#00ff33"
+        publish="true"
+      />
+      <Hero
+        titel="Finnisage 13.6.2020"
+        text="Bacchanale. Retrospektive."
+        termin="2.5.–13.6.2020"
+        background="#ffff33"
+        publish="true"
+      />
         {allMdx.edges.map(({ node: post }) => (
 
           <div
@@ -57,7 +67,7 @@ export default function Index({ data: { site, allMdx } }) {
               margin-bottom: 40px;
               max-width:48%;
               min-width:48%;
-              margin:1% 1% 90px 1%;
+              margin:1% auto 90px auto;
               @media(max-width:796px){
                 min-width:98%;
                     margin:1% 1% 40px 1%;
@@ -68,8 +78,8 @@ export default function Index({ data: { site, allMdx } }) {
             <h2
               css={css({
                 fontWeight:400,
-                fontFamily:'Roboto',
-                fontSize: theme.fontsizes.middle,
+
+                fontSize: theme.fontsizes.h2small,
                 padding:0,
                 margin:8,
                 letterSpacing:'.05rem',
@@ -86,14 +96,20 @@ export default function Index({ data: { site, allMdx } }) {
                 {post.frontmatter.title.toUpperCase()}
               </Link>
             </h2>
+            <Link
+              style={{cursor:'pointer'}}
+              to={post.frontmatter.slug}
+                 aria-label={`View ${post.frontmatter.title}`}
+              >
             <Img css={css`
-               objectFit:cover;
+              object-fit:cover;
+
               max-height: 240px;
               `}
               fluid={post.frontmatter.banner.childImageSharp.fluid}
                 alt={site.siteMetadata.keywords.join(', ')}
               />
-
+             </Link>
             </div>
             </div>
 
