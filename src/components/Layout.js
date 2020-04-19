@@ -27,38 +27,17 @@ const getGlobalStyles = theme => {
     a {
       color: ${theme.colors.link};
       text-decoration: none;
-      font-weight: 500;
       &:hover,
       &:focus {
-        color: ${theme.colors.green};
+        color: ${theme.colors.white};
       }
       &:hover {
         color: #red;
       }
     }
-  ul {
-    text-align: left;
-    line-height: 1.5;
-    font-size:1rem;
-    margin:0;
-    padding:4px;
-    list-style:none;
+    h2 {
 
-  }
-li {
-
-      padding:0;
-      margin:0;
-     color:black;
-
-  }
-    
-    p{
-      text-align: left;
-      line-height: 1.5;
-      font-size: 1.rem;
     }
-
     h1,
     h2,
     h3,
@@ -76,7 +55,8 @@ li {
     }
     ${bpMaxSM} {
 
-
+      p,
+      em,
       strong {
         font-size: 90%;
       }
@@ -84,18 +64,9 @@ li {
         font-size: 30px;
       }
       h2 {
-        font-size:1.2rem;
-        line-height: 1;
-
+        font-size: 14px;
+        color:red;
       }
-      li a {
-        font-size:1rem;
-        padding:0;
-        margin:0;
-
-      }
-
-
     }
     hr {
       margin: 50px 0;

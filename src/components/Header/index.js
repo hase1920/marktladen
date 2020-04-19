@@ -46,7 +46,7 @@ const Header = ({ site,siteTitle }) => {
                @media(max-width:800px){
                 margin-left:0px;
                 width:110px;
-                height:auto;
+
               }
 
 
