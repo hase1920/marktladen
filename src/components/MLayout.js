@@ -2,7 +2,9 @@ import React from 'react'
 import Container from '../components/Container'
 import {graphql, useStaticQuery} from 'gatsby'
 import Layout from '../components/Layout'
+
 import Hero from './Hero'
+
 const MLayout = ({children}) => {
     const data = useStaticQuery(graphql`
     query {
@@ -22,6 +24,7 @@ const MLayout = ({children}) => {
             <Container>
         {children}
         </Container>
+
         </Layout>
     )
 }

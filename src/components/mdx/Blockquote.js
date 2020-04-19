@@ -3,10 +3,8 @@ import styled from '@emotion/styled'
 export default styled.blockquote`
 
 border:none;
-padding:0;
-
-line-height: 2em;
-padding: 30px 0;
+margin-top: 0;
+margin-bottom: 1rem;
 
 p {
     font-family: 'Roboto Slab';
@@ -17,7 +15,6 @@ p {
 @media (max-width: 800px){
 p {
   font-size: 1.2em;
+    margin:0;
 }
-  line-height: 0.5em;
-  padding: 5px 0;
 }`

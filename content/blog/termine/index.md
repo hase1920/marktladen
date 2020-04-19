@@ -8,30 +8,24 @@ banner: './banner.jpg'
 ---
 
 
-Auch in diesem Jahr bieten wir wieder ein Programm, das Euch beeindrucken wird.
-Wir haben Filme ausgesucht, die zu spannenden Diskussionen führen können.
+Aufgrund der Corona-Richtlinien können sich die hier gelisteten Veranstaltungstermine leider noch ändern. Bitte sehen Sie zur Sicherheit vor Ihrem Kommen noch einmal hier nach. Die Ausstellungen werden auf jeden Fall in ***Markt 1*** aufgebaut und von außen zu betrachten sein. Außerdem bietet Ihnen diese Website weitere Einblicke und Informationen zu unseen Aktivitäten.
 
-## Kino-Club Mitglied werden
+<section>
+<article>
 
-1. adf
-2. sdaf
-3. asdf
+## N° 1 Bacchanale. Retrospektive // 2.5.–13.6.2020
 
-Aus rechtlichen Gründen werden Film im Rahmen eines privaten Clubs gezeigt.
-Um diese Filme sehen zu können, musst Du Mitglied des Kino-Clubs von Markt 1 werden.
+*** Markt 1 *** lädt ein zur ***Finissage – Samstag, den 13.6. // 18 Uhr***  
+Mit Filmvorführung des CINEMA PARADISO, einem Videozusammenschnitt alter Super-8-Dokumente aus Baccharacher Archiven von Sandra Meurer, begleitet von Musik von Gregor Praml. Für den regional typischen Rebensaft wird gesorgt  sein.
 
-Lade hier das Formular für den Antrag der Mitgliedschaft auf Dein Gerät, fülle es aus und sende es an Markt 1.
+</article>
 
-Dann werden wir *asfsfdf* regelmäßig zu den unregelmäßig stattfindenden Veranstaltungen einladen.
+<article>
 
+## N° 2 Urban Scetchers, Rhein-Main // 20.6.–11.7.2020
 
-![titel des Bildes](/images/theater/5.jpg)
+***Markt 1*** lädt ein zur ***Vernissage – Samstag, den 20.6. // 18 Uhr***  
+Wir bemühen uns um einen kleinen musikalischen oder literarischen Live-Act. Gezeigt werden Zeichnungen der Gegenwart im Spannungsfeld zu Victor Hugos Skizzen seiner Rheinreisen aus den Jahren 1839 und 1840. Die Ausstellung wird ergänzt durch einen Vortrag zu Victor Hugo in Oberwesel am darauf folgenden Wochenende.
 
-
-sdfdsfddfgsfdgsdfg   
-sdfgsdfgsdf
-
-
-- ffdghf
-- sdfgsdfgsdf
-- dfgsdgf
+</article>
+</section>

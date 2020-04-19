@@ -25,6 +25,9 @@ export default () => {
       <Link to="/archiv" activeClassName="active" aria-label="Archiv">
       Archiv
       </Link>
+      <Link to="/foerderer" activeClassName="active" aria-label="Förderer">
+    Förderer
+      </Link>
 
       <Link to="/datenschutz" activeClassName="active" aria-label="Datenschutzerklärung">
           Datenschutz

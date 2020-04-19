@@ -18,7 +18,7 @@ module.exports = {
 
   // Manifest and Progress color
   themeColor: '#5348FF',
-  backgroundColor: '#2b2e3c',
+  backgroundColor: '#333',
 
   // Social component
   twitter: 'https://twitter.com/markt1/',

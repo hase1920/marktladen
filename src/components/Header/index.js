@@ -17,7 +17,7 @@ const Header = ({ site,siteTitle }) => {
          display:flex;
          justify-content:flex-end;
          padding-top:0px;
-       `}><span style={{padding:0,margin:'0 -4px 0 0'}}> <a href="mailto:kontakt@markt1-bacharach.de?subject=Anfrage"><FaRegEnvelope fontSize="1.8rem" color="#000"/></a> </span></div>
+       `}><span style={{padding:0,margin:'0 -4px 0 0'}}> <a href="mailto:kontakt@markt1-bacharach.de?subject=Anfrage"><FaRegEnvelope fontSize="1.9rem" color="#000"/></a> </span></div>
         <nav
           css={css`
             width: 100%;

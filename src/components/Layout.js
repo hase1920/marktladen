@@ -35,9 +35,40 @@ const getGlobalStyles = theme => {
         color: #red;
       }
     }
-    h2 {
+  ul {
+    text-align: left;
+    line-height: 1.5;
+    font-size:1rem;
+    margin:0;
+    padding:4px;
+    list-style:none;
 
+  }
+li {
+
+      padding:0;
+      margin:0;
+     color:black;
+
+  }
+    h2 {
+      text-align: left;
+      font-size: 1.3rem;
+      margin-top: 20px;
+      margin-bottom: 0px;
+      font-weight: 500;
+      line-height: 2;
+      color:black;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
     }
+    p{
+      text-align: left;
+      line-height: 1.5;
+      font-size: 1.rem;
+    }
+
     h1,
     h2,
     h3,
@@ -55,8 +86,7 @@ const getGlobalStyles = theme => {
     }
     ${bpMaxSM} {
 
-      p,
-      em,
+
       strong {
         font-size: 90%;
       }
@@ -64,9 +94,18 @@ const getGlobalStyles = theme => {
         font-size: 30px;
       }
       h2 {
-        font-size: 14px;
-        color:red;
+        font-size:1.2rem;
+        line-height: 1;
+
       }
+      li a {
+        font-size:1rem;
+        padding:0;
+        margin:0;
+
+      }
+
+
     }
     hr {
       margin: 50px 0;

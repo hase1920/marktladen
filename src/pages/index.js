@@ -102,7 +102,8 @@ padding: 0; margin:0 auto 0 auto;
                  aria-label={`View ${post.frontmatter.title}`}
               >
             <Img css={css`
-              object-fit:cover;
+              object-fit:contain;
+                object-position: center;
 
               max-height: 220px;
               `}
