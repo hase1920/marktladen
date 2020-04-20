@@ -56,7 +56,10 @@ const Hero = ({titel,text,publish,background,termin}) => {
             font-weight: 500;
             font-size: ${theme.fontsizes.xgreat};
             ${bpMaxMD}{
-                font-size: ${theme.fontsizes.great};
+              h1 {
+                font-size: ${theme.fontsizes.small};
+              }
+
             }
           `}
         >

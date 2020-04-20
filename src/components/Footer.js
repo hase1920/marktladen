@@ -21,16 +21,16 @@ const Footer = () => (
       <div
         css={css`
           display: flex;
-          
-          justify-content: flex-end;
+
+          justify-content: center;
         `}
       >
-       
+
 
           <Twitter />
           <GitHub />
         </div>
-        
+
     </Container>
   </footer>
 )

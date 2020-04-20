@@ -32,9 +32,9 @@ const Header = ({ site,siteTitle }) => {
             to="/"
             aria-label="go to homepage"
             css={css`
-            
+
              display:flex;
-              margin-left: 10px;
+              margin-left: -3px;
               padding-left:0;
               flex-basis:1;
               margin-top:-30px;
@@ -59,7 +59,7 @@ const Header = ({ site,siteTitle }) => {
              color:theme.color.text`}>Markt 1</h2>
              :
              <img  src={Logo}  alt="Logo" />
-             
+
              }
 
           </Link>

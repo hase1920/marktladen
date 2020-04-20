@@ -11,9 +11,10 @@ import Header from './Header'
 import reset from '../lib/reset'
 import { fonts } from '../lib/typography'
 import config from '../../config/website'
-
+import Footer from '../components/Footer'
 import Container from './Container'
 import Link from './Link'
+
 
 const getGlobalStyles = theme => {
   return css`
@@ -32,7 +33,7 @@ const getGlobalStyles = theme => {
       &:focus {
         color: ${theme.colors.green};
       }
-      
+
     }
 
     h1,
@@ -62,7 +63,7 @@ const getGlobalStyles = theme => {
       }
       h2 {
         font-size: 1.1rem;
-       
+
       }
     }
     hr {
@@ -260,10 +261,20 @@ export default ({
          margin:auto;
          width:90%;
          justify-content:space-between;
-          
-        `}>  
-        
-          
+          ${bpMaxSM}{
+            flex-direction:column;
+            a{
+              text-align:center;
+            }
+          }
+        `}>
+
+        {!noFooter && (
+          <Footer
+            author={site.siteMetadata.author.name}
+            noSubscribeForm={noSubscribeForm}
+          />
+        )}
           <Link style={{fontSize:"0.9rem",fontWeight:300, letterSpacing: "0.05rem"}} to="/datenschutz" activeClassName="active" aria-label="Datenschutzerklärung">
           Datenschutz
       </Link>
@@ -274,7 +285,7 @@ export default ({
         Impressum
       </Link>
       </Container>
-          
+
         </Container>
       </Fragment>
 

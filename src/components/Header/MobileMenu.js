@@ -28,8 +28,12 @@ const Toggle = ({ children }) => {
        @media(max-width:900px){
          height:15px;
          padding-right:20px;
+         
        }
-
+       @media(max-width:325px){
+         height:8px;
+         padding-right:20px;
+       }
     `}>
 
       <button

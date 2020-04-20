@@ -13,7 +13,7 @@ const Share = ({ url, title, twitterHandle }) => {
         width:100%;
         justify-content:flex-end;
         `}>
-       
+
       <span css={css`
         font-size:.8rem;
         padding-top:2px;

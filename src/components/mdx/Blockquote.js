@@ -8,7 +8,7 @@ margin:0 auto 1rem auto;
 padding:0;
 width: 98%;
 p {
-    padding:10px 10px 10px 20px;
+    padding:0;
     font-family: 'Roboto Slab';
     color: #227844;
 

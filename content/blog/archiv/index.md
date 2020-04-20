@@ -7,8 +7,6 @@ published: true
 banner: './banner.jpg'
 ---
 
-Wir freuen uns, Euch wieder ein tolles Programm anbieten zu können.   
-Wir empfehlen rechtzeitige Reservierung.  
-Ein nicht kleiner Teil der Vorstellungen sind schon ausverkauft.
+## Noch blicken allein auf die Zukunft
 
-## Ja Neni
+Vergangene Aktionen werden wir hier dokumentieren
