@@ -6,7 +6,7 @@ font-size: 1.3rem;
 margin-top: 2rem;
   margin-bottom: 2rem;
 font-weight: 500;
-line-height: 1.2;
+
 color:black;
 font-family: Roboto;
 font-style: normal;
@@ -25,7 +25,7 @@ font-weight: 500;
   margin-top: 2rem;
   margin-bottom: 2rem;
   font-size:1.2rem;
-  line-height: 1.2rem;
+  line-height: 1.6rem;
 }
 
 `

@@ -22,10 +22,11 @@ const Toggle = ({ children }) => {
        flex-direction:column;
        justify-content:flex-end;
 
-       height:30px;
+       height:15px;
        padding:0 20px;
+       margin-top:20px;
        @media(max-width:900px){
-         height:25px;
+         height:15px;
          padding-right:20px;
        }
 
@@ -100,6 +101,7 @@ const Toggle = ({ children }) => {
             z-index: 20;
             left: 0;
             top: 0;
+            padding:20px;
             width: 100vw;
             height: 100vh;
             display: flex;

@@ -3,7 +3,7 @@ export default styled.ol`
 text-align: left;
 line-height: 1.5;
 font-size:1rem;
-margin:0 60px;
+margin:0;
 padding:4px;
 list-style:none;
 li {

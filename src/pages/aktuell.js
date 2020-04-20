@@ -8,6 +8,7 @@ import styled from '@emotion/styled'
 import {keyframes,css} from '@emotion/core'
 import {Dialog} from '@reach/dialog'
 import {FaArrowRight,FaArrowLeft, FaWindowClose} from 'react-icons/fa'
+import titel from './titel'
 import './styles.css'
 let myInterval=null
 //import Img from 'gatsby-image'
@@ -31,6 +32,8 @@ const MyData=({data})=> {
   const[dasImg,setImg]=useState(parseInt(0))
   const[dasArr,setDasArr]= useState(null)
   const[diashow,setDiashow]= useState(false)
+  const[titeldaten,setTiteldaten]=useState(null)
+  const[bild,setBild]=useState(null)
   //const site = data.site
   const daten = data.theater.nodes
    let zaehler=1;
@@ -53,6 +56,13 @@ const MyData=({data})=> {
   },[daten])
   
   useEffect(()=>{
+    if(titel)
+      setTiteldaten(titel)
+     
+
+  },[])
+
+  useEffect(()=>{
    
   },[dasImg])
    
@@ -67,7 +77,10 @@ const MyData=({data})=> {
     setSelected(!selected)
     console.log(item.id + ' item.id')
     setImg(item.id-1)
-    //console.log(item.id+ "  "+ dasArr.length)
+    if(titeldaten.titeldaten[item.id-1])
+      setBild(titeldaten.titeldaten[item.id-1].titel)
+    else
+      setBild("")
     if(item.id>dasArr.length) schliessen()
    
   }
@@ -84,8 +97,14 @@ function mlinks(){
   z=parseInt(z)
   z=z-2
   if(z<0) return
+  if(titeldaten.titeldaten[z])
+    setBild(titeldaten.titeldaten[z].titel)
+  else
+  setBild("")
   setImg(z)
   console.log("links")
+  console.log(bild)
+  
   return setSelectedImg(dasArr[z])
   
   
@@ -97,22 +116,33 @@ function rechts(){
   let z=selectedImg.id
   z=parseInt(z)
   console.log(z +" in rechts")
+  console.log(bild)
   if(z>=dasArr.length) return
   setImg(z)
- 
+  if(z>dasArr.length && titeldaten.titeldaten[z]===undefined)
+    setBild(titeldaten.titeldaten[z].titel)
+    else {
+      setBild("")
+    }
   return setSelectedImg(dasArr[z])
 }
    function timing(){
      setDiashow(true)
+     
      setSelectedImg(dasArr[0])
+     if(titeldaten.titeldaten[0])
+      setBild(titeldaten.titeldaten[0].titel)
+     else
+     setBild("") 
      zaehler=1;
      setImg(0)
      myInterval = setInterval(function(){ 
-         console.log("ich mach w")
-       
-        if(zaehler<dasArr.length){
+         if(zaehler<dasArr.length){
           setImg(zaehler)
           setSelectedImg(dasArr[zaehler++])
+          if(titeldaten.titeldaten.length<zaehler && titeldaten.titeldaten[zaehler-1]!==undefined)
+            setBild(titeldaten.titeldaten[zaehler-1].titel)
+           else setBild("") 
         } 
         else{
           clearInterval(myInterval)
@@ -124,6 +154,7 @@ function rechts(){
     
   return dasArr && (
     <div>
+      <h2 style={{textAlign:'center',paddingLeft:20}}>Bilder vom Theaterfest 2019</h2>
     <div css={css`
       display: flex;
       flex-wrap:wrap;
@@ -139,6 +170,7 @@ function rechts(){
       }
       
     `}>
+      
         {dasArr.map((item,index) => {
           return(
             <MyDiv css={css`
@@ -175,7 +207,17 @@ function rechts(){
      <Dialog aria-label="Dialog">
        
        <img alt="Bild vom Theaterfestival"  srcSet={selectedImg.childImageSharp.fluid.srcSet} />
-  
+       <div css={css`
+        display:flex;
+        position:relative;
+        z-index:2800;
+        top:-13px;
+        width:100%;
+        justify-content:center;
+        margin-bottom:5px;
+         padding-bottom:5px;
+         color:${theme.colors.black};
+        `}> {bild}</div>
        <div css={css`
          display:flex;
          width:100%;
@@ -209,7 +251,7 @@ function rechts(){
       justifyContent:'flex-end',
       border:'1px red grey',
       height:15,margin:'-20px auto 0 auto'}}>
-      <span style={{padding:'0 10px'}}> Theaterfestival  </span><br/>
+      <span style={{padding:'0 10px'}}> Theaterfestival </span><br/>
       {dasImg+1} / {daten.length}</div>
       } 
     </div>

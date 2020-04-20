@@ -29,15 +29,6 @@ export default () => {
     Förderer
       </Link>
 
-      <Link style={{fontSize:"0.8rem",fontWeight:300, letterSpacing: "0.05rem"}} to="/datenschutz" activeClassName="active" aria-label="Datenschutzerklärung">
-          Datenschutz
-      </Link>
-      <Link style={{fontSize:"0.8rem",fontWeight:300, letterSpacing: "0.05rem"}} to="/kontakt" activeClassName="active" aria-label="Kontakt">
-        Kontakt
-      </Link>
-      <Link style={{fontSize:"0.8rem", fontWeight:300, letterSpacing: "0.05rem", marginBottom:50}} to="/impressum" activeClassName="active" aria-label="Impressum">
-        Impressum
-      </Link>
       <ThemeToggler
         css={{}}
         toggleTheme={theme.toggleTheme}

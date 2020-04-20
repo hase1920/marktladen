@@ -5,7 +5,7 @@ import { bpMaxSM } from '../lib/breakpoints'
 import { Twitter, GitHub } from './Social'
 import Container from './Container'
 
-const Footer = ({ author }) => (
+const Footer = () => (
   <footer>
     <Container
       css={css`
@@ -21,16 +21,16 @@ const Footer = ({ author }) => (
       <div
         css={css`
           display: flex;
-          align-items: center;
-          justify-content: space-between;
+          
+          justify-content: flex-end;
         `}
       >
-
+       
 
           <Twitter />
           <GitHub />
         </div>
-
+        
     </Container>
   </footer>
 )

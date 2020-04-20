@@ -32,7 +32,7 @@ const themes = {
     colors: {
       primary: lighten(0.05, colors.blue),
       text: colors.white,
-      bodyBg: colors.white,
+      bodyBg: colors.black,
       headerBg: colors.black,
       link: lighten(0.05, colors.gray),
       ...colors,

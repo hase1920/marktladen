@@ -10,32 +10,19 @@ const Share = ({ url, title, twitterHandle }) => {
     <div
       css={css`
         display: flex;
-        align-items: center;
-      border-top:1px grey solid;
-        justify-content: flex-start;
-        div {
-          margin-right: 20px;
-          cursor: pointer;
-          :hover {
-            color: ${theme.colors.primary};
-          }
-        }
-        span {
-          margin-right: 20px;
-          font-size: 70%;
-          text-transform: uppercase;
-          line-height: 2.5;
-          opacity: 0.7;
-        }
-      `}
-    >
-      <div
-        css={css`
-          flex-grow: 1;
-          font-size:1rem;
-        `}
-      />
-      <span style={{fontSize:'.8rem'}}><p>Share article</p></span>
+        width:100%;
+        justify-content:flex-end;
+        `}>
+       
+      <span css={css`
+        font-size:.8rem;
+        padding-top:2px;
+        padding-right:5px;
+        color:${theme.colors.text};
+        `
+      }
+      >Share article</span>
+      &rarr;&nbsp;&nbsp;
       <TwitterShareButton
         url={url}
         quote={title}
@@ -43,6 +30,7 @@ const Share = ({ url, title, twitterHandle }) => {
       >
       <p>  Twitter</p>
       </TwitterShareButton>
+      &nbsp;&nbsp;
       <FacebookShareButton
         url={url}
         quote={title}

@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import Img from 'gatsby-image/withIEPolyfill'
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import SEO from 'components/SEO'
 import { css} from '@emotion/core'
@@ -30,6 +30,7 @@ export default function Post({
 
         <Container
           css= {css`
+          padding:0 35px;
             @media(max-width:800px){
               padding:0;
               margin:0;
@@ -41,11 +42,12 @@ export default function Post({
 
             <Img css={css`
               objectFit:cover;
+              objectPosition: 50% 50%;
               max-height: 420px;
             `
 
             }
-              sizes={banner.childImageSharp.fluid}
+              fluid={banner.childImageSharp.fluid}
               alt={site.siteMetadata.keywords.join(', ')}
             />
 

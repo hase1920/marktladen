@@ -15,10 +15,10 @@ export default styled.article`
     color: white;
     line-height:2.2rem;
   }
-  :nth-child(even) {
+  :nth-of-type(even) {
     background: #df01d7;
   }
-  :nth-child(odd) {
+  :nth-of-type(odd) {
     background: #00ff33;
   }
   @media(max-width:796px){

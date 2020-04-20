@@ -11,8 +11,9 @@ import Header from './Header'
 import reset from '../lib/reset'
 import { fonts } from '../lib/typography'
 import config from '../../config/website'
-import Footer from '../components/Footer'
+
 import Container from './Container'
+import Link from './Link'
 
 const getGlobalStyles = theme => {
   return css`
@@ -29,11 +30,9 @@ const getGlobalStyles = theme => {
       text-decoration: none;
       &:hover,
       &:focus {
-        color: ${theme.colors.white};
+        color: ${theme.colors.green};
       }
-      &:hover {
-        color: #red;
-      }
+      
     }
 
     h1,
@@ -47,7 +46,7 @@ const getGlobalStyles = theme => {
         color: ${theme.colors.text};
         &:hover,
         &:focus {
-          color: ${theme.colors.text};
+          color: ${theme.colors.green};
         }
       }
     }
@@ -59,11 +58,11 @@ const getGlobalStyles = theme => {
         font-size: 90%;
       }
       h1 {
-        font-size: 30px;
+        font-size: 1.3rem;
       }
       h2 {
-        font-size: 14px;
-        color:red;
+        font-size: 1.1rem;
+       
       }
     }
     hr {
@@ -256,12 +255,26 @@ export default ({
           <MDXProvider components={mdxComponents}>
             <Fragment>{children}</Fragment>
           </MDXProvider>
-          {!noFooter && (
-            <Footer
-              author={site.siteMetadata.author.name}
-
-            />
-          )}
+          <Container css={css`
+          display:flex;
+         margin:auto;
+         width:90%;
+         justify-content:space-between;
+          
+        `}>  
+        
+          
+          <Link style={{fontSize:"0.9rem",fontWeight:300, letterSpacing: "0.05rem"}} to="/datenschutz" activeClassName="active" aria-label="Datenschutzerklärung">
+          Datenschutz
+      </Link>
+      <Link style={{fontSize:"0.9rem",fontWeight:300, letterSpacing: "0.05rem"}} to="/kontakt" activeClassName="active" aria-label="Kontakt">
+        Kontakt
+      </Link>
+      <Link style={{fontSize:"0.9rem", fontWeight:300, letterSpacing: "0.05rem", marginBottom:50}} to="/impressum" activeClassName="active" aria-label="Impressum">
+        Impressum
+      </Link>
+      </Container>
+          
         </Container>
       </Fragment>
 

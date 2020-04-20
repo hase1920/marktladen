@@ -8,7 +8,7 @@ export default styled.h1`
   margin-bottom: 20px;
   padding-top: 30px;
   padding-bottom: 10px;
-  letter-spacing:.5rem;
+  letter-spacing:.04rem;
   @media(max-width:800px){
     font-size:1.3rem;
   }

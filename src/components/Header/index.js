@@ -11,6 +11,7 @@ import Container from '../Container'
 
 const Header = ({ site,siteTitle }) => {
   const theme = useTheme()
+  console.log(theme)
   return (
     <Container noVerticalPadding>
         <div css={css`
@@ -31,8 +32,9 @@ const Header = ({ site,siteTitle }) => {
             to="/"
             aria-label="go to homepage"
             css={css`
+            
              display:flex;
-              margin-left: 0;
+              margin-left: 10px;
               padding-left:0;
               flex-basis:1;
               margin-top:-30px;
@@ -46,13 +48,19 @@ const Header = ({ site,siteTitle }) => {
                @media(max-width:800px){
                 margin-left:0px;
                 width:110px;
-
+                margin-top:-35px;
               }
 
 
             `}
           >
-             <img src={Logo}  alt="Logo" />
+            {theme.themeName==="dark"?
+            <h2 css={css`
+             color:theme.color.text`}>Markt 1</h2>
+             :
+             <img  src={Logo}  alt="Logo" />
+             
+             }
 
           </Link>
           </div>

@@ -8,7 +8,7 @@ import Link from 'components/Link'
 import { useTheme } from 'components/Theming'
 import Container from 'components/Container'
 
-import Img from 'gatsby-image'
+import Img from 'gatsby-image/withIEPolyfill'
 
 import Hero from '../components/Hero'
 
@@ -102,8 +102,8 @@ padding: 0; margin:0 auto 0 auto;
                  aria-label={`View ${post.frontmatter.title}`}
               >
             <Img css={css`
-              object-fit:cover;
-
+              objectFit:cover;
+              objectPosition: 50% 50%;
               max-height: 220px;
               `}
               fluid={post.frontmatter.banner.childImageSharp.fluid}
@@ -155,7 +155,7 @@ export const pageQuery = graphql`
             description
             banner {
               childImageSharp {
-              fluid(maxWidth: 1000) {
+              fluid(maxWidth: 900) {
                   ...GatsbyImageSharpFluid
                 }
               }
