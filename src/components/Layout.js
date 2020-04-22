@@ -11,9 +11,10 @@ import Header from './Header'
 import reset from '../lib/reset'
 import { fonts } from '../lib/typography'
 import config from '../../config/website'
-
+import Footer from '../components/Footer'
 import Container from './Container'
 import Link from './Link'
+
 
 const getGlobalStyles = theme => {
   return css`
@@ -32,7 +33,7 @@ const getGlobalStyles = theme => {
       &:focus {
         color: ${theme.colors.green};
       }
-      
+
     }
 
     h1,
@@ -62,7 +63,7 @@ const getGlobalStyles = theme => {
       }
       h2 {
         font-size: 1.1rem;
-       
+
       }
     }
     hr {
@@ -134,6 +135,153 @@ const getGlobalStyles = theme => {
         border-radius: 5px;
       }
     }
+
+    
+    /* ----------- iPhone 4 and 4S ----------- */
+    
+    /* Portrait and Landscape */
+    @media only screen 
+      and (min-device-width: 320px) 
+      and (max-device-width: 480px)
+      and (-webkit-min-device-pixel-ratio: 2) {
+    
+    }
+    
+    /* Portrait */
+    @media only screen 
+      and (min-device-width: 320px) 
+      and (max-device-width: 480px)
+      and (-webkit-min-device-pixel-ratio: 2)
+      and (orientation: portrait) {
+    }
+    
+    /* Landscape */
+    @media only screen 
+      and (min-device-width: 320px) 
+      and (max-device-width: 480px)
+      and (-webkit-min-device-pixel-ratio: 2)
+      and (orientation: landscape) {
+    
+    }
+    
+    /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+    
+    /* Portrait and Landscape */
+    @media only screen 
+      and (min-device-width: 320px) 
+      and (max-device-width: 568px)
+      and (-webkit-min-device-pixel-ratio: 2) {
+    
+    }
+    
+    /* Portrait */
+    @media only screen 
+      and (min-device-width: 320px) 
+      and (max-device-width: 568px)
+      and (-webkit-min-device-pixel-ratio: 2)
+      and (orientation: portrait) {
+    }
+    
+    /* Landscape */
+    @media only screen 
+      and (min-device-width: 320px) 
+      and (max-device-width: 568px)
+      and (-webkit-min-device-pixel-ratio: 2)
+      and (orientation: landscape) {
+    
+    }
+    
+    /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+    
+    /* Portrait and Landscape */
+    @media only screen 
+      and (min-device-width: 375px) 
+      and (max-device-width: 667px) 
+      and (-webkit-min-device-pixel-ratio: 2) { 
+    
+    }
+    
+    /* Portrait */
+    @media only screen 
+      and (min-device-width: 375px) 
+      and (max-device-width: 667px) 
+      and (-webkit-min-device-pixel-ratio: 2)
+      and (orientation: portrait) { 
+    
+    }
+    
+    /* Landscape */
+    @media only screen 
+      and (min-device-width: 375px) 
+      and (max-device-width: 667px) 
+      and (-webkit-min-device-pixel-ratio: 2)
+      and (orientation: landscape) { 
+    
+    }
+    
+    /* ----------- iPhone 6+, 7+ and 8+ ----------- */
+    
+    /* Portrait and Landscape */
+    @media only screen 
+      and (min-device-width: 414px) 
+      and (max-device-width: 736px) 
+      and (-webkit-min-device-pixel-ratio: 3) { 
+    
+    }
+    
+    /* Portrait */
+    @media only screen 
+      and (min-device-width: 414px) 
+      and (max-device-width: 736px) 
+      and (-webkit-min-device-pixel-ratio: 3)
+      and (orientation: portrait) { 
+    
+    }
+    
+    /* Landscape */
+    @media only screen 
+      and (min-device-width: 414px) 
+      and (max-device-width: 736px) 
+      and (-webkit-min-device-pixel-ratio: 3)
+      and (orientation: landscape) { 
+    
+    }
+    
+    /* ----------- iPhone X ----------- */
+    
+    /* Portrait and Landscape */
+    @media only screen 
+      and (min-device-width: 375px) 
+      and (max-device-width: 812px) 
+      and (-webkit-min-device-pixel-ratio: 3) { 
+    
+    }
+    
+    /* Portrait */
+    @media only screen 
+      and (min-device-width: 375px) 
+      and (max-device-width: 812px) 
+      and (-webkit-min-device-pixel-ratio: 3)
+      and (orientation: portrait) { 
+    
+    }
+    
+    /* Landscape */
+    @media only screen 
+      and (min-device-width: 375px) 
+      and (max-device-width: 812px) 
+      and (-webkit-min-device-pixel-ratio: 3)
+      and (orientation: landscape) { 
+    
+    }
+    
+    @media only screen() and orientation: landscape){
+                  a{color:yellow !important;}
+    }
+
+
+
+
   `
 }
 
@@ -225,16 +373,18 @@ export default ({
             max-width:1200px;
             border-left:40px #00ff33 solid;
             border-right:40px #00ff33 solid;
-            @media(max-width:345px){
-              border-left:4px #00ff33 solid;
-            border-right:4px #00ff33 solid;
-            }
-            @media(min-width(346px) and (max-width:800px){
+            @media(max-width:800px){
              width:100%;
               margin:auto;
               border-left:30px #00ff33 solid;
             border-right:30px #00ff33 solid;
             }
+            @media(max-width:325px){
+              width:100%;
+               margin:auto;
+               border-left:4px #00ff33 solid;
+             border-right:4px #00ff33 solid;
+             }
 
           `}
         >
@@ -264,10 +414,20 @@ export default ({
          margin:auto;
          width:90%;
          justify-content:space-between;
-          
-        `}>  
-        
-          
+          ${bpMaxSM}{
+            flex-direction:column;
+            a{
+              text-align:center;
+            }
+          }
+        `}>
+
+        {!noFooter && (
+          <Footer
+            author={site.siteMetadata.author.name}
+            noSubscribeForm={noSubscribeForm}
+          />
+        )}
           <Link style={{fontSize:"0.9rem",fontWeight:300, letterSpacing: "0.05rem"}} to="/datenschutz" activeClassName="active" aria-label="Datenschutzerklärung">
           Datenschutz
       </Link>
@@ -278,7 +438,7 @@ export default ({
         Impressum
       </Link>
       </Container>
-          
+
         </Container>
       </Fragment>
 

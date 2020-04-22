@@ -21,10 +21,20 @@ export default styled.article`
   :nth-of-type(odd) {
     background: #00ff33;
   }
+  @media(max-width:320px){
+    width:98%;
+    padding:0;
+    margin:1px 1%;
+    h2 {
+      font-size:1.4rem;
+    }
+
+  }
   @media(max-width:796px){
     width:98%;
     padding:0;
     margin:1px 1%;
 
   }
+  
 `

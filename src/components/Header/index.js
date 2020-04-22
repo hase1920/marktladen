@@ -32,9 +32,9 @@ const Header = ({ site,siteTitle }) => {
             to="/"
             aria-label="go to homepage"
             css={css`
-            
+
              display:flex;
-              
+              margin-left: -3px;
               padding-left:0;
               flex-basis:1;
               margin-top:-30px;
@@ -43,28 +43,24 @@ const Header = ({ site,siteTitle }) => {
               img {
                 width:130px;
                 height:auto;
-                object-fit:cover;
+                object-fit:contain;
               }
-              @media(max-width:326px){
+               @media(max-width:800px){
                 margin-left:0px;
-                width:70px;
+                width:110px;
                 margin-top:-35px;
-                img {
-                  width:190px;
-                  height:auto;
-                  object-fit:cover;
-                }
               }
-             
-             
-              
+
 
             `}
           >
-            
+            {theme.themeName==="dark"?
+            <h2 css={css`
+             color:theme.color.text`}>Markt 1</h2>
+             :
              <img  src={Logo}  alt="Logo" />
-             
-          
+
+             }
 
           </Link>
           </div>
@@ -80,10 +76,12 @@ const Header = ({ site,siteTitle }) => {
              <Link to="/">Home &rarr;</Link>
              :
            <div>
-             <MobileMenu>
+              <MobileMenu>
              <Links />
              </MobileMenu>
            </div>
+           
+           
 
            }
 

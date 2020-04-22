@@ -3,29 +3,69 @@ import { Link } from 'gatsby'
 import { useTheme } from '../Theming'
 import ThemeToggler from './ThemeToggler'
 import { FaHome } from 'react-icons/fa'
+import { css} from '@emotion/core'
 
 export default () => {
   const theme = useTheme()
   return (
-    <React.Fragment>
-      <Link to="/" activeClassName="active" aria-label="Zur Homeseite">
+    <div 
+      css={css`
+      position:fixed;
+      overflow:scroll;
+      height:100%;
+      top:0;
+      left:0;
+      right:0;
+      display:flex;
+      padding:50px 0;
+      justify-content:center;
+      background:blue;
+      flex-direction:column;
+      a {
+        text-align:center;
+        padding-left:0;
+       
+      }
+      @media (max-width:800px) (orientation: landscape){
+        padding-top:40px;
+        body {
+          font-size:12px;
+        }
+       
+      a {
+        font-size: .9rem;
+         color:white;
+         padding:0;
+         margin:0;
+         background:red;
+         
+         
+      }
+      }
+      `
+    }>
+      <Link
+        
+      to="/" activeClassName="active" aria-label="Zur Homeseite">
        <FaHome />
       </Link>
 
-      <Link style={{fontWeight:100, fontFamily:"Roboto Slab"}} to="/ausstellung" activeClassName="active" aria-label="Ausstellungen">
+      <Link 
+    
+       to="/ausstellung" activeClassName="active" aria-label="Ausstellungen">
         Ausstellung
       </Link>
 
-      <Link style={{fontWeight:100, fontFamily:"Roboto Slab"}} to="/ueber_uns" activeClassName="active" aria-label="Über uns">
+      <Link to="/ueber_uns" activeClassName="active" aria-label="Über uns">
         Über uns
       </Link>
-      <Link style={{fontWeight:100, fontFamily:"Roboto Slab"}} to="/termine" activeClassName="active" aria-label="Termine">
+      <Link  to="/termine" activeClassName="active" aria-label="Termine">
         Termine
       </Link>
-      <Link style={{fontWeight:100, fontFamily:"Roboto Slab"}} to="/archiv" activeClassName="active" aria-label="Archiv">
+      <Link to="/archiv" activeClassName="active" aria-label="Archiv">
       Archiv
       </Link>
-      <Link style={{fontWeight:100, fontFamily:"Roboto Slab"}} to="/foerderer" activeClassName="active" aria-label="Förderer">
+      <Link to="/foerderer" activeClassName="active" aria-label="Förderer">
     Förderer
       </Link>
 
@@ -34,6 +74,6 @@ export default () => {
         toggleTheme={theme.toggleTheme}
         themeName={theme.themeName}
       />
-    </React.Fragment>
+    </div>
   )
 }

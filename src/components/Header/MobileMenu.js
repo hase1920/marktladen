@@ -21,15 +21,19 @@ const Toggle = ({ children }) => {
        display:flex;
        flex-direction:column;
        justify-content:flex-end;
-
-       height:15px;
+       flex-basis:10px;
+       
        padding:0 20px;
        margin-top:20px;
        @media(max-width:900px){
          height:15px;
          padding-right:20px;
+         
        }
-
+       @media(max-width:325px){
+         height:8px;
+         padding-right:20px;
+       }
     `}>
 
       <button
@@ -111,9 +115,12 @@ const Toggle = ({ children }) => {
         >
           <Container
             css={css`
-              display: flex;
+              ;
+              padding-top:30px;
+              bottom:0;
               flex-direction: column;
               align-items: center;
+              overflow:scroll;
               justify-content: space-evenly;
               a {
                 color: white;
@@ -124,12 +131,26 @@ const Toggle = ({ children }) => {
                 :hover {
                   background: rgba(0, 0, 0, 0.2);
                 }
+                
               }
               .active {
                 opacity:  0.4;
               }
-            `}
-          >
+              @media(max-width:450px){
+               position:absolute;
+               top:0;
+               left:0;
+               right:0; 
+               a {
+                 font-size:1rem;
+               }
+              }
+             `}
+              >
+             
+              
+           
+          
             {children}
           </Container>
         </div>
